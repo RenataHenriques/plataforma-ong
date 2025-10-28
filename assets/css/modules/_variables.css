@@ -1,0 +1,41 @@
+/* Conteúdo do arquivo: assets/css/modules/_variables.css */
+
+:root {
+    /* =======================================
+       1. PALETA DE CORES (Mínimo 8)
+       ======================================= */
+    --cor-primaria: #007bff;     /* Ex: Azul institucional */
+    --cor-secundaria: #28a745;   /* Ex: Verde para botões de Sucesso/Doação */
+    --cor-destaque: #ffc107;     /* Ex: Amarelo para Atenção/Destaques */
+
+    /* Neutras */
+    --cor-texto-principal: #212529;
+    --cor-fundo-claro: #f8f9fa;
+    --cor-fundo-escuro: #343a40; /* Footer e Header */
+
+    /* Feedback/Alertas */
+    --cor-alerta-sucesso: #28a745;
+    --cor-alerta-erro: #dc3545;
+
+
+    /* =======================================
+       2. TIPOGRAFIA HIERÁRQUICA (Mínimo 5 tamanhos)
+       ======================================= */
+    --fonte-principal: 'Arial', sans-serif;
+    --tamanho-h1: 2.5rem;    /* 40px */
+    --tamanho-h2: 2rem;      /* 32px */
+    --tamanho-h3: 1.5rem;    /* 24px */
+    --tamanho-texto-base: 1rem;   /* 16px */
+    --tamanho-texto-pequeno: 0.875rem; /* 14px */
+
+
+    /* =======================================
+       3. ESPAÇAMENTO MODULAR (Múltiplos de 8px)
+       ======================================= */
+    --esp-xsmall: 8px;
+    --esp-small: 16px;
+    --esp-medium: 24px;
+    --esp-large: 32px;
+    --esp-xlarge: 48px;
+    --esp-xxlarge: 64px;
+}

@@ -1,0 +1,17 @@
+/* =========================================================
+   ARQUIVO PRINCIPAL: assets/css/style.css
+   Este arquivo importa todos os módulos CSS do projeto.
+   ========================================================= */
+
+/* 1. SISTEMA DE DESIGN (Variáveis e Configurações Base) */
+@import url('modules/_variables.css');
+@import url('modules/_reset.css');
+
+/* 2. LAYOUT GERAL E ESTRUTURA (Header, Main, Footer) */
+@import url('modules/_layout.css');
+
+/* 3. COMPONENTES E ESTILIZAÇÃO (Botões, Cards, Formulários) */
+@import url('modules/_components.css');
+
+/* 4. RESPONSIVIDADE (Mídia Queries e Breakpoints) */
+@import url('modules/_responsive.css');

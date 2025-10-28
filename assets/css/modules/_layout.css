@@ -1,0 +1,60 @@
+/* Conteúdo do arquivo: assets/css/modules/_layout.css */
+
+/* Define a área de conteúdo que terá largura máxima e será centralizada */
+.container {
+    width: 90%; /* Largura no mobile */
+    max-width: 1200px; /* Largura máxima para telas grandes */
+    margin: 0 auto; /* Centraliza o container na tela */
+    padding: var(--esp-small); /* Padding interno usando a variável */
+}
+
+/* =======================================
+   HEADER e NAV (Aplicação de Flexbox)
+   ======================================= */
+header {
+    background-color: var(--cor-fundo-escuro);
+    padding: var(--esp-small) 0;
+    color: white;
+}
+
+header h1 {
+    font-size: var(--tamanho-h3);
+    padding: 0 var(--esp-small); /* Padding para o texto do h1 */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    display: block; /* Ocupa a largura total para facilitar o clique no mobile */
+    padding: var(--esp-small);
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* =======================================
+   MAIN e FOOTER
+   ======================================= */
+main {
+    padding: var(--esp-large) 0; /* Espaçamento no topo e na base do conteúdo principal */
+}
+
+section {
+    margin-bottom: var(--esp-xlarge); /* Espaço entre as grandes seções */
+    padding: 0 var(--esp-small);
+}
+
+footer {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-fundo-claro);
+    text-align: center;
+    padding: var(--esp-medium) 0;
+    margin-top: auto; /* Empurra o footer para a base, graças ao Grid no body */
+}
