@@ -1,0 +1,35 @@
+/* Conteúdo de assets/css/acessibilidade.css */
+
+/* Definição de cores para Modo Escuro/Alto Contraste */
+@media (prefers-color-scheme: dark) {
+    /* Define as novas variáveis no escopo do body (root) */
+    :root {
+        /* Fundo e texto base */
+        --cor-fundo-principal: #121212; /* Preto absoluto ou quase */
+        --cor-texto-principal: #FFFFFF; /* Branco absoluto */
+        
+        /* Cores de suporte */
+        --cor-primaria: #008DFF; /* Azul mais brilhante para contraste */
+        --cor-primaria-escura: #0056b3;
+        --cor-fundo-header: #1E1E1E; /* Cinza escuro para cabeçalho */
+        --cor-fundo-claro: #333333; /* Fundo de cards/containers */
+        --cor-alerta-erro: #FF6B6B; /* Vermelho claro para erro */
+    }
+
+    /* Aplica as variáveis ao corpo do documento */
+    body {
+        background-color: var(--cor-fundo-principal);
+        color: var(--cor-texto-principal);
+    }
+
+    /* Ajuste para elementos que normalmente seriam brancos (ex: Cards) */
+    .card {
+        background-color: var(--cor-fundo-claro);
+        border-color: #555555;
+    }
+    
+    /* Garante que o texto dentro de cards e outras áreas seja branco */
+    .card-body, main section {
+        color: var(--cor-texto-principal);
+    }
+}

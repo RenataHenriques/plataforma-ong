@@ -1,109 +1,112 @@
 /* Conteúdo do arquivo: assets/css/modules/_components.css */
 
 /* =======================================
-   1. BOTÕES (Estados Visuais)
-   ======================================= */
+   1. BOTÕES (Estados Visuais)
+   ======================================= */
 .btn {
-    display: inline-block;
-    padding: var(--esp-small) var(--esp-medium);
-    border-radius: 4px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s, opacity 0.3s;
-    border: 1px solid transparent;
+    display: inline-block;
+    padding: var(--esp-small) var(--esp-medium);
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+    border: 1px solid transparent;
 }
 
 /* Botão Primário (Doação/Ação Principal) */
 .btn-primary {
-    background-color: var(--cor-primaria);
-    color: white;
+    background-color: var(--cor-primaria);
+    color: white;
 }
 
 .btn-primary:hover, .btn-primary:focus {
-    background-color: #0056b3; /* Cor um pouco mais escura */
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Efeito de foco/acesso */
+    background-color: #0056b3; /* Cor um pouco mais escura */
+    /* O box-shadow já serve como bom indicador de foco para WCAG */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); 
 }
 
 /* Estado Desabilitado */
 .btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 
 /* =======================================
-   2. CARDS RESPONSIVOS PARA PROJETOS
-   ======================================= */
+   2. CARDS RESPONSIVOS PARA PROJETOS
+   ======================================= */
 .card {
-    background-color: white;
-    border: 1px solid var(--cor-fundo-claro);
-    border-radius: var(--esp-xsmall);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra suave */
-    overflow: hidden; /* Garante que a imagem se ajuste */
+    background-color: white;
+    border: 1px solid var(--cor-fundo-claro);
+    border-radius: var(--esp-xsmall);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    overflow: hidden; /* Garante que a imagem se ajuste */
 }
 
 .card-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
 }
 
 .card-body {
-    padding: var(--esp-medium);
+    padding: var(--esp-medium);
 }
 
 
 /* =======================================
-   3. FORMULÁRIOS ESTILIZADOS
-   ======================================= */
+   3. FORMULÁRIOS ESTILIZADOS
+   ======================================= */
 fieldset {
-    border: 1px solid #ccc;
-    padding: var(--esp-medium);
-    margin-bottom: var(--esp-large);
-    border-radius: var(--esp-xsmall);
+    border: 1px solid #ccc;
+    padding: var(--esp-medium);
+    margin-bottom: var(--esp-large);
+    border-radius: var(--esp-xsmall);
 }
 
 legend {
-    font-size: var(--tamanho-h3);
-    padding: 0 var(--esp-xsmall);
-    font-weight: bold;
+    font-size: var(--tamanho-h3);
+    padding: 0 var(--esp-xsmall);
+    font-weight: bold;
 }
 
 label {
-    display: block;
-    margin-top: var(--esp-small);
-    font-weight: 500;
+    display: block;
+    margin-top: var(--esp-small);
+    font-weight: 500;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="date"] {
-    width: 100%;
-    padding: var(--esp-xsmall);
-    margin-bottom: var(--esp-small);
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    transition: border-color 0.3s;
+    width: 100%;
+    padding: var(--esp-xsmall);
+    margin-bottom: var(--esp-small);
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.3s;
 }
 
+/* CORREÇÃO WCAG 2.1: Foco Robusto */
 input:focus {
-    border-color: var(--cor-primaria);
-    outline: none;
+    border-color: var(--cor-primaria);
+    outline: 2px solid var(--cor-primaria, #007bff); /* Adiciona um outline visível */
+    outline-offset: 2px; /* Afasta o outline da borda do campo */
 }
 
 
 /* =======================================
-   4. VALIDAÇÃO VISUAL DE FORMULÁRIOS
-   ======================================= */
+   4. VALIDAÇÃO VISUAL DE FORMULÁRIOS
+   ======================================= */
 /* Indica campo inválido com borda vermelha (exceto se o campo não foi tocado) */
 input:invalid:not(:placeholder-shown):not(:focus) {
-    border-color: var(--cor-alerta-erro);
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    border-color: var(--cor-alerta-erro);
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 /* Indica campo válido com borda verde */
 input:valid:not(:placeholder-shown) {
-    border-color: var(--cor-alerta-sucesso);
+    border-color: var(--cor-alerta-sucesso);
 }
